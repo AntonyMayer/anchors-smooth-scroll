@@ -3,7 +3,7 @@
 \******************************/
 
 class Anchor {
-    constructor(link, options = null) {
+    constructor(link) {
         this.state = {
             prevPosition: 0,    // will be updated on click
             scrollTo: 0,        // will be updated on click
@@ -107,6 +107,6 @@ class Anchor {
 /****************\
 < * INITIALIZE * >
 \****************/
-export default _ => {
-    [...document.getElementsByClassName('anchor')].forEach(anchor => new Anchor(anchor));
+export default (options) => {
+    [...document.querySelectorAll(options.selector)].forEach(anchor => new Anchor(anchor));
 }
