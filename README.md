@@ -8,7 +8,8 @@ import anchors from './anchors.js'
 
 // initialize anchors
 anchors({
-    options
+    selector: '.anchor', // any valid selector
+    speed: 150           // speed in px per frame
 });
 ```
 
